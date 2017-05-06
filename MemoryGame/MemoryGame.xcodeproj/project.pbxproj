@@ -26,6 +26,9 @@
 		53056F8E1EBDF1F1002A5891 /* TimerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53056F8C1EBDF1F1002A5891 /* TimerView.m */; };
 		53056F8F1EBDF1F1002A5891 /* TimerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53056F8D1EBDF1F1002A5891 /* TimerView.xib */; };
 		53056F931EBDF279002A5891 /* UIView+NibLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = 53056F921EBDF279002A5891 /* UIView+NibLoading.m */; };
+		53824FA61EBE3EFE00133483 /* Appfile in Resources */ = {isa = PBXBuildFile; fileRef = 53824FA41EBE3EFE00133483 /* Appfile */; };
+		53824FA71EBE3EFE00133483 /* Fastfile in Resources */ = {isa = PBXBuildFile; fileRef = 53824FA51EBE3EFE00133483 /* Fastfile */; };
+		53824FAA1EBE46DA00133483 /* Gymfile in Resources */ = {isa = PBXBuildFile; fileRef = 53824FA91EBE46DA00133483 /* Gymfile */; };
 		5542B4801B69F1EDE39625D6 /* libPods-MemoryGameUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A827F9F275CC690601BFCB1 /* libPods-MemoryGameUITests.a */; };
 		6CE234620F239AEEDFA01FCE /* libPods-MemoryGameTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 787DC6D8DE3583EE8FCB9CB7 /* libPods-MemoryGameTests.a */; };
 /* End PBXBuildFile section */
@@ -90,6 +93,9 @@
 		53056F901EBDF241002A5891 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		53056F911EBDF279002A5891 /* UIView+NibLoading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+NibLoading.h"; path = "Catagories/UIView+NibLoading.h"; sourceTree = "<group>"; };
 		53056F921EBDF279002A5891 /* UIView+NibLoading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+NibLoading.m"; path = "Catagories/UIView+NibLoading.m"; sourceTree = "<group>"; };
+		53824FA41EBE3EFE00133483 /* Appfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Appfile; path = fastlane/Appfile; sourceTree = "<group>"; };
+		53824FA51EBE3EFE00133483 /* Fastfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Fastfile; path = fastlane/Fastfile; sourceTree = "<group>"; };
+		53824FA91EBE46DA00133483 /* Gymfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Gymfile; path = fastlane/Gymfile; sourceTree = "<group>"; };
 		6D7C0D98FAEB942BD8E70220 /* Pods-MemoryGameUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemoryGameUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MemoryGameUITests/Pods-MemoryGameUITests.release.xcconfig"; sourceTree = "<group>"; };
 		787DC6D8DE3583EE8FCB9CB7 /* libPods-MemoryGameTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MemoryGameTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A0BB3CF2B581DCF3EF0C39E /* Pods-MemoryGameUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemoryGameUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MemoryGameUITests/Pods-MemoryGameUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -129,6 +135,7 @@
 		53056F191EBD53E7002A5891 = {
 			isa = PBXGroup;
 			children = (
+				53824FA31EBE3EEC00133483 /* Fastlane */,
 				53056F241EBD53E7002A5891 /* MemoryGame */,
 				53056F3E1EBD53E7002A5891 /* MemoryGameTests */,
 				53056F491EBD53E7002A5891 /* MemoryGameUITests */,
@@ -288,6 +295,16 @@
 			path = UI/CustomViews/TimerView;
 			sourceTree = "<group>";
 		};
+		53824FA31EBE3EEC00133483 /* Fastlane */ = {
+			isa = PBXGroup;
+			children = (
+				53824FA91EBE46DA00133483 /* Gymfile */,
+				53824FA41EBE3EFE00133483 /* Appfile */,
+				53824FA51EBE3EFE00133483 /* Fastfile */,
+			);
+			name = Fastlane;
+			sourceTree = "<group>";
+		};
 		A425C02459710AE4BEB4BD7C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -429,7 +446,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53824FA61EBE3EFE00133483 /* Appfile in Resources */,
+				53824FA71EBE3EFE00133483 /* Fastfile in Resources */,
 				53056F351EBD53E7002A5891 /* LaunchScreen.storyboard in Resources */,
+				53824FAA1EBE46DA00133483 /* Gymfile in Resources */,
 				53056F321EBD53E7002A5891 /* Assets.xcassets in Resources */,
 				53056F301EBD53E7002A5891 /* Main.storyboard in Resources */,
 				53056F8F1EBDF1F1002A5891 /* TimerView.xib in Resources */,
@@ -703,7 +723,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -746,7 +766,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
