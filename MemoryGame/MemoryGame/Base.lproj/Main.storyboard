@@ -26,7 +26,7 @@
             </objects>
             <point key="canvasLocation" x="-602" y="139"/>
         </scene>
-        <!--Game View Controller-->
+        <!--MemeryGame-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="GameViewController" sceneMemberID="viewController">
@@ -40,7 +40,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0ig-cs-jGU">
                                 <rect key="frame" x="82.5" y="196.5" width="210" height="210"/>
-                                <color key="backgroundColor" red="0.7474321722984314" green="0.97432190179824829" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="0ig-cs-jGU" secondAttribute="height" multiplier="1:1" id="HMD-dJ-Xx2"/>
                                     <constraint firstAttribute="width" constant="240" id="fhb-XI-69P">
@@ -63,24 +63,37 @@
                                             <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lzz-NB-p6G">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lzz-NB-p6G">
                                                     <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <subviews>
-                                                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8tb-aQ-vzl">
+                                                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8tb-aQ-vzl">
                                                             <rect key="frame" x="2" y="2" width="116" height="116"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <color key="backgroundColor" red="1" green="0.052035812039999997" blue="0.0379790146" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </imageView>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p3E-R5-Tb8" customClass="ImageView">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="p3E-R5-Tb8" customClass="ImageView">
                                                             <rect key="frame" x="2" y="2" width="116" height="116"/>
-                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         </imageView>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="0.69782162410000004" green="0.75091240879999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" red="0.97254901959999995" green="0.84020140662608678" blue="0.3789801790202898" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="8tb-aQ-vzl" secondAttribute="bottom" constant="2" id="2l0-av-UyO"/>
+                                                        <constraint firstItem="p3E-R5-Tb8" firstAttribute="bottom" secondItem="8tb-aQ-vzl" secondAttribute="bottom" id="5vj-2l-iO5"/>
+                                                        <constraint firstItem="8tb-aQ-vzl" firstAttribute="leading" secondItem="Lzz-NB-p6G" secondAttribute="leading" constant="2" id="7tL-AE-TUv"/>
+                                                        <constraint firstItem="p3E-R5-Tb8" firstAttribute="top" secondItem="8tb-aQ-vzl" secondAttribute="top" id="9R3-bj-dwZ"/>
+                                                        <constraint firstItem="8tb-aQ-vzl" firstAttribute="top" secondItem="Lzz-NB-p6G" secondAttribute="top" constant="2" id="AaZ-rY-nb6"/>
+                                                        <constraint firstAttribute="trailing" secondItem="8tb-aQ-vzl" secondAttribute="trailing" constant="2" id="GSN-7S-Hpy"/>
+                                                        <constraint firstItem="p3E-R5-Tb8" firstAttribute="leading" secondItem="8tb-aQ-vzl" secondAttribute="leading" id="Xxt-45-HGK"/>
+                                                        <constraint firstItem="p3E-R5-Tb8" firstAttribute="trailing" secondItem="8tb-aQ-vzl" secondAttribute="trailing" id="q5Z-Wm-wdc"/>
+                                                    </constraints>
                                                 </view>
                                             </subviews>
                                         </view>
+                                        <constraints>
+                                            <constraint firstItem="Lzz-NB-p6G" firstAttribute="top" secondItem="5iI-jD-2fF" secondAttribute="top" id="2uI-ZA-xqI"/>
+                                            <constraint firstAttribute="bottom" secondItem="Lzz-NB-p6G" secondAttribute="bottom" id="Otf-a6-gYx"/>
+                                            <constraint firstItem="Lzz-NB-p6G" firstAttribute="leading" secondItem="5iI-jD-2fF" secondAttribute="leading" id="R4H-wu-bVz"/>
+                                            <constraint firstAttribute="trailing" secondItem="Lzz-NB-p6G" secondAttribute="trailing" id="bnm-lB-0wV"/>
+                                        </constraints>
                                         <connections>
                                             <outlet property="gameImage" destination="p3E-R5-Tb8" id="uIU-vl-c7o"/>
                                             <outlet property="invertedView" destination="8tb-aQ-vzl" id="FJ6-3b-mPU"/>
@@ -107,11 +120,9 @@
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k0g-Fn-wsy" customClass="TimerView">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="191.5"/>
-                                <color key="backgroundColor" red="0.92220934570000002" green="0.78588388480000004" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lqC-OQ-0hY" customClass="ImageView">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lqC-OQ-0hY" customClass="ImageView">
                                 <rect key="frame" x="137.5" y="86.5" width="100" height="100"/>
-                                <color key="backgroundColor" red="0.50716145830000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="lqC-OQ-0hY" secondAttribute="height" multiplier="1:1" id="gfM-ZQ-0qL"/>
                                     <constraint firstAttribute="width" constant="100" id="zmT-mQ-ltP">
@@ -120,7 +131,7 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.97254901959999995" green="0.91764705879999997" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="2Qv-x2-kMM" firstAttribute="centerX" secondItem="0ig-cs-jGU" secondAttribute="centerX" id="3WR-8b-zPB"/>
                             <constraint firstItem="0ig-cs-jGU" firstAttribute="centerX" secondItem="lqC-OQ-0hY" secondAttribute="centerX" id="5Ob-aA-cWI"/>
@@ -167,7 +178,7 @@
                         </variation>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
-                    <navigationItem key="navigationItem" id="cKe-b7-IWx"/>
+                    <navigationItem key="navigationItem" title="MemeryGame" id="cKe-b7-IWx"/>
                     <connections>
                         <outlet property="gameCollectionViewWidthContraint" destination="fhb-XI-69P" id="53o-ZI-DI6"/>
                         <outlet property="imageCollectionView" destination="0ig-cs-jGU" id="jpV-IV-bu1"/>

@@ -11,7 +11,7 @@
 
 static int const ZERO_HEIGHT = 0.0;
 static int const MIN_TIMER_INTERVAL = 1; // in secs
-static int const DEFAULT_TIMER_EXPIRATION_TIME = 2; // in secs
+static int const DEFAULT_TIMER_EXPIRATION_TIME = 15; // in secs
 
 
 #endif /* Constants_h */

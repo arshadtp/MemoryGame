@@ -41,7 +41,10 @@
 			
 			[self setImage:image];
 		}
-		successBlock(image, error);
+		dispatch_async(dispatch_get_main_queue(), ^{
+			successBlock(image, error);
+		});
+		
 	}];
 	
 }

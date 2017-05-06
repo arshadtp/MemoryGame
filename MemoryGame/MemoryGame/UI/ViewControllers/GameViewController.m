@@ -39,6 +39,7 @@ typedef NS_ENUM(NSInteger, QuestionPosition) {
 @implementation GameViewController
 
 #pragma Mark - View Related Methods
+
 - (void)viewDidLoad {
 	
 	[super viewDidLoad];
@@ -288,14 +289,19 @@ typedef NS_ENUM(NSInteger, QuestionPosition) {
 		flickerImageArray = [imageURLArray subarrayWithRange:NSMakeRange(0, TOTAL_CELLS)].mutableCopy;
 		
 		tolatImageToBeLoaded = flickerImageArray.count;
-		[_imageCollectionView reloadData];
+		dispatch_async(dispatch_get_main_queue(), ^{
+			[_imageCollectionView reloadData];
+		});
 		
 	} andFailureBlock:^(NSError *error) {
 		
-		[SVProgressHUD dismiss];
-		[Utility showAlertWithTitle:error.domain andMessage:error.localizedDescription andLeftButtonTitle:NSLocalizedString(@"RETRY", nil) andRightButtonTitle:nil withLeftButtonAction:^{
-			[self fetchFlickerImages];
-		} andRightButtonAction:nil inViewController:self];
+		dispatch_async(dispatch_get_main_queue(), ^{
+			[Utility showAlertWithTitle:error.domain andMessage:error.localizedDescription andLeftButtonTitle:NSLocalizedString(@"RETRY", nil) andRightButtonTitle:nil withLeftButtonAction:^{
+				[self fetchFlickerImages];
+			} andRightButtonAction:nil inViewController:self];
+			[SVProgressHUD dismiss];
+
+		});
 	} andCachePolicy:NSURLRequestReturnCacheDataElseLoad];
 }
 
