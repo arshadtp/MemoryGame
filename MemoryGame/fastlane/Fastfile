@@ -20,7 +20,8 @@ lane :beta do
 	cert
 	sigh
   gym(
-	# scheme: "MemoryGame",
+
+	scheme: "MemoryGame",
     export_method: "development"
   )
 
